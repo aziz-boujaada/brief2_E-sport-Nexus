@@ -1,0 +1,128 @@
+:root {
+  --bg-color: #0d0d0d;
+  --pramiry-color: #00cfff;
+  --secondry-color: #b300ff;
+  --banner-bg: #14141eb3;
+  --gray-color: rgb(131, 131, 131);
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+    "Liberation Mono", "Courier New", monospace;
+  --font-sans: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+body {
+  background-color: var(--bg-color);
+}
+
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+button {
+  border: none;
+  border-radius: 1em;
+  width: 12em;
+  height: 3em;
+  color: #ffff;
+  font-size: 12px;
+  font-weight: bold;
+  background: linear-gradient(
+    to right,
+    var(--pramiry-color),
+    var(--secondry-color)
+  );
+  transition: all 0.5s;
+}
+
+/*Header styling*/
+#header {
+  background-color: var(--banner-bg);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 1em;
+  border-bottom: 1px solid var(--pramiry-color);
+}
+
+.logo h1 {
+  font-size: 16px;
+  font-family: var(--font-sans);
+  background: linear-gradient(
+    to right,
+    var(--pramiry-color),
+    var(--secondry-color)
+  );
+  color: transparent;
+  background-clip: text;
+  transition: all 0.5s;
+}
+.logo h1:hover {
+  transform: scale(1.1);
+}
+
+.nav_list nav ul {
+  display: flex;
+  align-items: center;
+  gap: 2em;
+}
+.nav_list nav ul li a {
+  color: var(--gray-color);
+  font-family: var(--font-sans);
+  transition: all 0.5s;
+  cursor: pointer;
+}
+.nav_list nav ul li a:hover,
+.nav_list nav ul li a.active {
+  color: var(--pramiry-color);
+  transform: scale(1.1);
+}
+
+.nav_button :hover {
+  transform: scale(1.1);
+}
+
+/*Hero section styling */
+
+#hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 10em;
+}
+#hero h1 {
+  text-align: center;
+  font-size: 4em;
+  font-family: var(--font-sans);
+  background: linear-gradient(
+    to right,
+    var(--pramiry-color),
+    var(--secondry-color)
+  );
+  color: transparent;
+  background-clip: text;
+}
+#hero p {
+  color: var(--gray-color);
+  font-size: 1em;
+  padding-top: 12px;
+  font-family: var(--font-sans);
+}
+
+.section_buttons {
+  display: flex;
+  align-items: center;
+  gap: 2em;
+  padding-top: 2em;
+}
+.section_buttons button {
+  height: 4em;
+  width: 14em;
+  font-size: 14px;
+}
+.section_buttons .watch_live_btn {
+  background:var(--bg-color);
+  color: var(--pramiry-color);
+  border: 1px solid var(--pramiry-color);
+}
