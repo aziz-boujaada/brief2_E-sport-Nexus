@@ -21,5 +21,16 @@ Nexus Esports is a comprehensive gaming platform that brings together competitiv
  FIGMA => to craet mockUp of project pages <br>
  HTML => to add website structur <br>
  CSS3 => to Desined website <br>
+<hr>
 
-
+# 🎬Website Pages
+   ## 1-HOME PAGE <br>
+   ### HEADER (Navigitio Bar)
+     - Logo in the lift side of navBar  <br>
+     - Navigition List (HOME , TOURNAMENTS , TEAMS , GAMES , BLOGS , EVENTS , COTACT). <br>
+     - Call to action button in right side of the navBar <br>
+   ### HERO SECTION
+      - section with backround black <br>
+      - big title designed with gridaients colors <br>
+      - small paragraph <br>
+      -  two CTA buttons with a gradients color 

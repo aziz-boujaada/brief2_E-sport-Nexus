@@ -4,6 +4,9 @@
   --secondry-color: #b300ff;
   --banner-bg: #14141eb3;
   --gray-color: rgb(131, 131, 131);
+  --icon-hover-1: rgba(82, 187, 239, 0.3);
+  --icon-hover-2: rgba(124, 36, 249, 0.3);
+  --icon-hover-3: rgba(14, 204, 229, 0.3);
   --white-color: #ffff;
   --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
     "Liberation Mono", "Courier New", monospace;
@@ -18,7 +21,11 @@ html {
 body {
   background-color: var(--bg-color);
 }
-
+hr {
+  height: 1px;
+  background-color: #00cfff;
+  border: none;
+}
 li {
   list-style: none;
 }
@@ -136,14 +143,15 @@ button {
 
 /*Footer */
 #footer {
-  padding-top: 6em;
+  padding: 6em 6em 1em;
 }
 .Top_footer {
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
   text-align: start;
-  border-top: 1px solid var(--pramiry-color);
+  border-top: 2px solid var(--pramiry-color);
+  padding-top: 2em;
 }
 /*left part*/
 .footer_description h1 {
@@ -173,6 +181,12 @@ button {
   border: 1px solid var(--pramiry-color);
   border-radius: 8px;
   padding: 0.5em;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+.footer_icons i:hover {
+  background-color: var(--icon-hover-1);
+  transform: scale(1.1);
 }
 /*platforms part*/
 .footer_links h2 {
@@ -185,4 +199,79 @@ button {
   font-size: 1em;
   color: var(--gray-color);
   font-family: var(--font-sans);
+  padding-top: 12px;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+.footer_links ul li:hover {
+  color: var(--pramiry-color);
+  transform: translateX(8px);
+}
+.contact_info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.info {
+  display: flex;
+  align-items: center;
+  gap: 2em;
+}
+.email_icon i {
+  background-color: var(--icon-hover-1);
+  color: var(--pramiry-color);
+  font-size: 1.5em;
+  padding: 8px;
+  border-radius: 8px;
+  text-align: center;
+}
+.phone_icon i {
+  background-color: var(--icon-hover-2);
+  color: var(--secondry-color);
+  font-size: 1.5em;
+  padding: 8px;
+  border-radius: 8px;
+  text-align: center;
+}
+.location_icon i {
+  background-color: var(--icon-hover-3);
+  color: rgba(0, 194, 194, 0.752);
+  font-size: 1.5em;
+  padding: 8px;
+  border-radius: 8px;
+  text-align: center;
+}
+.info h3 {
+  color: var(--gray-color);
+  font-size: 12px;
+  font-family: var(--font-sans);
+  padding-top: 8px;
+}
+.info p {
+  color: var(--gray-color);
+  font-size: 16px;
+  font-family: var(--font-sans);
+}
+
+.copyright_part {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.copyright_part p {
+color: var(--gray-color);
+font-size: 16px;
+font-family: var(--font-sans);
+}
+
+.terms_part a{
+  color: var(--gray-color);
+font-size: 16px;
+font-family: var(--font-sans);
+padding-left: 1.5em;
+transition: all 0.5s;
+}
+.terms_part a:hover{
+color: var(--pramiry-color);
+transform: scale(1.1);
 }
