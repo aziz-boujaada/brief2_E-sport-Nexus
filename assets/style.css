@@ -1,8 +1,9 @@
 :root {
-  --bg-color: #0d0d0d;
+  --bg-color: #07030e;
   --pramiry-color: #00cfff;
   --secondry-color: #b300ff;
   --banner-bg: #14141eb3;
+  --cards-bg: #1a1a2e;
   --gray-color: rgb(131, 131, 131);
   --icon-hover-1: rgba(82, 187, 239, 0.3);
   --icon-hover-2: rgba(124, 36, 249, 0.3);
@@ -14,12 +15,17 @@
     "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
+*{
+  margin: 0;
+  padding: 0;
+}
 html {
   scroll-behavior: smooth;
 }
 
 body {
   background-color: var(--bg-color);
+  position: relative;
 }
 hr {
   height: 1px;
@@ -46,23 +52,9 @@ button {
     var(--secondry-color)
   );
   transition: all 0.5s;
+  cursor: pointer;
 }
-
-/*Header styling*/
-#header {
-  background-color: var(--banner-bg);
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  position: fixed;
-  width: 100%;
-  padding: 1em;
-  border-bottom: 1px solid var(--pramiry-color);
-}
-
-.logo h1 {
-  font-size: 16px;
-  font-family: var(--font-sans);
+h1 {
   background: linear-gradient(
     to right,
     var(--pramiry-color),
@@ -70,6 +62,34 @@ button {
   );
   color: transparent;
   background-clip: text;
+  font-family: var(--font-sans);
+}
+p {
+  color: var(--gray-color);
+  font-size: 1em;
+  padding-top: 12px;
+  font-family: var(--font-sans);
+}
+
+section {
+  padding-top: 100px;
+}
+
+/*Header styling*/
+#header {
+  background-color: var(--banner-bg);
+  display: flex;
+  align-items: center;
+  z-index: 100;
+  justify-content: space-around;
+  position: fixed;
+  width: 100%;
+  height: 80px;
+  border-bottom: 1px solid var(--pramiry-color);
+}
+
+.logo h1 {
+  font-size: 16px;
   transition: all 0.5s;
 }
 .logo h1:hover {
@@ -101,27 +121,36 @@ button {
 
 #hero {
   display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 80px);
+  position: relative;
+  background-image: url(/assets/images/home_page_img.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+#hero::after {
+  content: "";
+  background-color: rgba(0, 0, 0, 0.655);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.hero_content {
+  display: flex;
   flex-direction: column;
   align-items: center;
   padding-top: 10em;
+
+  z-index: 1;
 }
 #hero h1 {
   text-align: center;
   font-size: 4em;
-  font-family: var(--font-sans);
-  background: linear-gradient(
-    to right,
-    var(--pramiry-color),
-    var(--secondry-color)
-  );
-  color: transparent;
-  background-clip: text;
-}
-#hero p {
-  color: var(--gray-color);
-  font-size: 1em;
-  padding-top: 12px;
-  font-family: var(--font-sans);
 }
 
 .section_buttons {
@@ -134,11 +163,68 @@ button {
   height: 4em;
   width: 14em;
   font-size: 14px;
+  transition: all 0.5s;
+}
+.section_buttons button i {
+  padding: 10px;
+}
+.section_buttons button:hover {
+  transform: scale(1.1);
 }
 .section_buttons .watch_live_btn {
   background: var(--bg-color);
   color: var(--pramiry-color);
   border: 1px solid var(--pramiry-color);
+}
+.section_buttons .watch_live_btn:hover {
+  background: var(--pramiry-color);
+  color: var(--bg-color);
+}
+
+/*Tournaments page*/
+#tournaments {
+  margin: 0 4em;
+}
+.tournament_title {
+  text-align: center;
+}
+.tournaments_cards {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4em;
+  padding-top: 2em;
+}
+.card {
+  background-color: var(--cards-bg);
+  border: 1px solid var(--pramiry-color);
+  border-radius: 12px;
+}
+.card_img img {
+  width: 100%;
+  border-radius: 6px;
+}
+
+.tournament_info{
+  padding: 1em;
+}
+.card .tournament_name {
+  font-size: 16px;
+  font-family: var(--font-sans);
+  color: var(--gray-color);
+}
+.card .tournament_game{
+  color: var(--pramiry-color);
+}
+
+.tournament_date {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.tournament_date i {
+  color: var(--gray-color);
+  padding-top: 12px;
 }
 
 /*Footer */
@@ -151,23 +237,11 @@ button {
   justify-content: space-between;
   text-align: start;
   border-top: 2px solid var(--pramiry-color);
-  padding-top: 2em;
+  padding: 2em 0;
 }
 /*left part*/
-.footer_description h1 {
-  background: linear-gradient(
-    to right,
-    var(--pramiry-color),
-    var(--secondry-color)
-  );
-  color: transparent;
-  background-clip: text;
-  font-family: var(--font-sans);
-}
 .footer_description p {
   padding-top: 1em;
-  color: var(--gray-color);
-  font-family: var(--font-sans);
 }
 .footer_icons {
   display: flex;
@@ -181,6 +255,7 @@ button {
   border: 1px solid var(--pramiry-color);
   border-radius: 8px;
   padding: 0.5em;
+  
   transition: all 0.5s;
   cursor: pointer;
 }
@@ -216,10 +291,12 @@ button {
   display: flex;
   align-items: center;
   gap: 2em;
+  padding: 1em;
 }
 .email_icon i {
   background-color: var(--icon-hover-1);
   color: var(--pramiry-color);
+  border: 1px solid var(--icon-hover-1);
   font-size: 1.5em;
   padding: 8px;
   border-radius: 8px;
@@ -228,6 +305,7 @@ button {
 .phone_icon i {
   background-color: var(--icon-hover-2);
   color: var(--secondry-color);
+  border: 1px solid var(--icon-hover-2);
   font-size: 1.5em;
   padding: 8px;
   border-radius: 8px;
@@ -236,6 +314,7 @@ button {
 .location_icon i {
   background-color: var(--icon-hover-3);
   color: rgba(0, 194, 194, 0.752);
+  border: 1px solid var(--icon-hover-3);
   font-size: 1.5em;
   padding: 8px;
   border-radius: 8px;
@@ -248,9 +327,7 @@ button {
   padding-top: 8px;
 }
 .info p {
-  color: var(--gray-color);
   font-size: 16px;
-  font-family: var(--font-sans);
 }
 
 .copyright_part {
@@ -258,20 +335,15 @@ button {
   align-items: center;
   justify-content: space-between;
 }
-.copyright_part p {
-color: var(--gray-color);
-font-size: 16px;
-font-family: var(--font-sans);
-}
 
-.terms_part a{
+.terms_part a {
   color: var(--gray-color);
-font-size: 16px;
-font-family: var(--font-sans);
-padding-left: 1.5em;
-transition: all 0.5s;
+  font-size: 16px;
+  font-family: var(--font-sans);
+  padding-left: 1.5em;
+  transition: all 0.5s;
 }
-.terms_part a:hover{
-color: var(--pramiry-color);
-transform: scale(1.1);
+.terms_part a:hover {
+  color: var(--pramiry-color);
+  transform: scale(1.1);
 }
