@@ -4,6 +4,9 @@
   --secondry-color: #b300ff;
   --banner-bg: #14141eb3;
   --cards-bg: #1a1a2e;
+  --border-color: rgba(14, 140, 194, 0.3);
+  --card-shadow-1: rgba(12, 109, 235, 0.1);
+  --card-shadow-2: rgba(176, 12, 235, 0.1);
   --gray-color: rgb(131, 131, 131);
   --icon-hover-1: rgba(82, 187, 239, 0.3);
   --icon-hover-2: rgba(124, 36, 249, 0.3);
@@ -15,7 +18,7 @@
     "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
-*{
+* {
   margin: 0;
   padding: 0;
 }
@@ -196,16 +199,43 @@ section {
   padding-top: 2em;
 }
 .card {
+  position: relative;
   background-color: var(--cards-bg);
-  border: 1px solid var(--pramiry-color);
+  border: 1px solid var(--border-color);
   border-radius: 12px;
+  overflow: hidden;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+.card_shadow{
+  background: linear-gradient(to right ,var(--card-shadow-1) , var(--card-shadow-2));
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 64px;
+  right: 24px;
+  display: none;
+  transition: 0.5s ease-in-out;
 }
 .card_img img {
-  width: 100%;
+  width: 300px;
+  height: 200px;
   border-radius: 6px;
+  transition: 0.5s all;
+}
+.card:hover {
+  transform: scale(1.05);
+}
+.card:hover .card_shadow {
+  display: block;
 }
 
-.tournament_info{
+.card:hover .card_img img {
+  transform: scale(1.08);
+}
+
+.tournament_info {
   padding: 1em;
 }
 .card .tournament_name {
@@ -213,19 +243,48 @@ section {
   font-family: var(--font-sans);
   color: var(--gray-color);
 }
-.card .tournament_game{
+.card .tournament_game {
   color: var(--pramiry-color);
 }
 
-.tournament_date {
+.date_team_number {
   display: flex;
   align-items: center;
   gap: 12px;
 }
-.tournament_date i {
+.date_team_number i {
   color: var(--gray-color);
   padding-top: 12px;
 }
+.join_tournament_btn {
+  margin-top: 1em;
+  width: 100%;
+}
+.prizz_pool {
+  background: linear-gradient(
+    to right,
+    var(--secondry-color),
+    var(--pramiry-color)
+  );
+  width: 50%;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border-radius: 24px;
+  position: absolute;
+  top: 6px;
+  right: 6px;
+}
+.prizz_pool p {
+  padding-bottom: 12px;
+  color: var(--white-color);
+}
+.prizz_pool i {
+  color: var(--white-color);
+}
+
 
 /*Footer */
 #footer {
@@ -255,7 +314,7 @@ section {
   border: 1px solid var(--pramiry-color);
   border-radius: 8px;
   padding: 0.5em;
-  
+
   transition: all 0.5s;
   cursor: pointer;
 }
