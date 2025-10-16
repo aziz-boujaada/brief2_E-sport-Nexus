@@ -3,7 +3,7 @@
   --pramiry-color: #00cfff;
   --secondry-color: #b300ff;
   --banner-bg: #14141eb3;
-  --cards-bg: #1a1a2e;
+  --cards-bg: #0b0b22;
   --border-color: rgba(14, 140, 194, 0.3);
   --card-shadow-1: rgba(12, 109, 235, 0.1);
   --card-shadow-2: rgba(176, 12, 235, 0.1);
@@ -11,6 +11,7 @@
   --icon-hover-1: rgba(82, 187, 239, 0.3);
   --icon-hover-2: rgba(124, 36, 249, 0.3);
   --icon-hover-3: rgba(14, 204, 229, 0.3);
+  --button-hover1: rgba(168, 0, 252, 0.3);
   --white-color: #ffff;
   --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
     "Liberation Mono", "Courier New", monospace;
@@ -185,14 +186,15 @@ section {
 }
 
 /*Tournaments page*/
-#tournaments {
+#tournaments , #teams {
   margin: 0 4em;
 }
-.tournament_title {
+.tournament_title , .teams_title {
   text-align: center;
 }
-.tournaments_cards {
-  display: flex;
+.tournaments_cards ,.teams_cards {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
   align-items: center;
   justify-content: space-between;
   gap: 4em;
@@ -207,29 +209,18 @@ section {
   transition: all 0.5s;
   cursor: pointer;
 }
-.card_shadow{
-  background: linear-gradient(to right ,var(--card-shadow-1) , var(--card-shadow-2));
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-  position: absolute;
-  bottom: 64px;
-  right: 24px;
-  display: none;
-  transition: 0.5s ease-in-out;
-}
+
 .card_img img {
   width: 300px;
   height: 200px;
   border-radius: 6px;
+  object-fit: cover;
   transition: 0.5s all;
 }
 .card:hover {
   transform: scale(1.05);
 }
-.card:hover .card_shadow {
-  display: block;
-}
+
 
 .card:hover .card_img img {
   transform: scale(1.08);
@@ -285,6 +276,81 @@ section {
   color: var(--white-color);
 }
 
+/*teams page styling*/
+.teams_info{
+  padding: 12px;
+}
+.team_name{
+  text-align: center;
+  color: var(--gray-color);
+  font-size: 14px;
+  font-family: var(--font-sans);
+  padding-top: 12px;
+}
+
+.team_numbers{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 12px;
+  padding-top: 24px;
+ 
+}
+.members_wins{
+text-align: center;
+}
+.members_wins i{
+display: flex;
+gap: 5px;
+font-size: 12px;
+text-align: center;
+}
+.members_wins p{
+font-size: 16px;
+text-align: center;
+}
+.members_wins #members{
+color: var(--pramiry-color);
+padding-left: 12px;
+}
+.members_wins #wins{
+color: var(--secondry-color);
+}
+
+.view_team_btn{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  background: var(--cards-bg);
+  color: var(--secondry-color);
+  border: 2px solid var(--secondry-color);
+  margin-top: 16px;
+  transition: all 0.5s;
+}
+.view_team_btn:hover{
+background: var(--button-hover1);
+color: var(--gray-color);
+}
+.team_ID{
+  background:linear-gradient(to left , var(--pramiry-color),var(--secondry-color));
+  height: 32px;
+  width: 32px;
+  border-radius: 50%;
+  padding: 10px;
+  position: absolute;
+  top: 16px;
+  left: 16px;
+}
+.team_ID p{
+font-size: 20px;
+font-family: var(--font-sans);
+font-weight: bolder;
+color: var(--white-color);
+text-align: center;
+padding-top: 0;
+}
 
 /*Footer */
 #footer {
@@ -314,7 +380,6 @@ section {
   border: 1px solid var(--pramiry-color);
   border-radius: 8px;
   padding: 0.5em;
-
   transition: all 0.5s;
   cursor: pointer;
 }
