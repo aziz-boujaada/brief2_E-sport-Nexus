@@ -10,7 +10,7 @@
     <meta name="author" content="aziz boujaada" />
     <meta name="keywords" content="E-sports nexus gamin " />
 
-    <link rel="stylesheet" href="assets/style.css" />
+    <link rel="stylesheet" href="/assets/style.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
@@ -26,11 +26,11 @@
       <div class="nav_list">
         <nav>
           <ul>
-            <li><a href="index.html" class="active">Home</a></li>
-            <li><a href="pages/tournament.html">Tournaments</a></li>
-            <li><a href="pages/teams.html">Teams</a></li>
-            <li><a href="/pages/games.html">Games</a></li>
-            <li><a href="/pages/blog.html">Blogs</a></li>
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="tournament.html">Tournaments</a></li>
+            <li><a href="teams.html">Teams</a></li>
+            <li><a href="games.html" class="active">Games</a></li>
+            <li><a href="blog.html">Blogs</a></li>
             <li><a href="#">Events</a></li>
             <li><a href="#">Contact</a></li>
           </ul>
@@ -41,24 +41,38 @@
       </div>
     </header>
 
-    <!--Hero Section-->
-    <section id="hero">
-      <div class="hero_content">
-        <h1>
-          Enter the Future of <br />
-          Competitive Gaming
-        </h1>
-        <p>
-          Join global tournaments, discover elite teams, and dominate the
-          leaderboard.
-        </p>
-        <div class="section_buttons">
-          <button><i class="fa-solid fa-trophy"></i>start Competition</button>
-          <button class="watch_live_btn">
-            <i class="fa-solid fa-play"></i>Watch Live
-          </button>
-        </div>
+    <!--contatct section-->
+    <section id="contact">
+      <div class="section_title">
+        <h1>Contact Us</h1>
+        <p>if you have any quistion or feedback you can write it here</p>
       </div>
+
+      <form action="#" id="form">
+        <h3>Get In Touch</h3>
+
+        <div class="name_email">
+          <div class="name">
+            <label for="name">Name</label>
+            <input type="text" placeholder="Enter Your Full Name" required />
+          </div>
+          <div class="email">
+            <label for="email">Email</label>
+            <input type="email" placeholder="Enter Your Email" required />
+          </div>
+        </div>
+
+        <div class="message_subject">
+            <div class="subject">
+            <label for="Subject">Subject</label>
+            <input type="text" placeholder="write your subject here">
+             </div>
+             <div class="message">
+            <label for="message">Message</label>
+            <textarea name="message" id="message" placeholder="write your message here" ></textarea>
+            </div>
+        </div>
+      </form>
     </section>
 
     <!--Footer-->
@@ -72,10 +86,18 @@
             Join Tournaments ,Connect with teams and rise the ranks.
           </p>
           <div class="footer_icons">
-            <a href="#" aria-label="footer links"><i class="fa-brands fa-youtube"></i></a>
-            <a href="#" aria-label="footer links"><i class="fa-brands fa-twitter"></i></a>
-            <a href="#" aria-label="footer links"><i class="fa-brands fa-twitch"></i></a>
-            <a href="#" aria-label="footer links"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" aria-label="footer links"
+              ><i class="fa-brands fa-youtube"></i
+            ></a>
+            <a href="#" aria-label="footer links"
+              ><i class="fa-brands fa-twitter"></i
+            ></a>
+            <a href="#" aria-label="footer links"
+              ><i class="fa-brands fa-twitch"></i
+            ></a>
+            <a href="#" aria-label="footer links"
+              ><i class="fa-brands fa-instagram"></i
+            ></a>
           </div>
         </div>
 
@@ -83,9 +105,17 @@
         <div class="footer_links">
           <h2>Platform</h2>
           <ul>
-            <li><a href="/pages/tournament.html" aria-label="footer links">Tournemants</a></li>
-            <li><a href="/pages/teams.html" aria-label="footer links">Teams</a></li>
-            <li><a href="/pages/games.html" aria-label="footer links">Games</a></li>
+            <li>
+              <a href="/pages/tournament.html" aria-label="footer links"
+                >Tournemants</a
+              >
+            </li>
+            <li>
+              <a href="/pages/teams.html" aria-label="footer links">Teams</a>
+            </li>
+            <li>
+              <a href="/pages/games.html" aria-label="footer links">Games</a>
+            </li>
             <li><a href="#" aria-label="footer links">Ranking</a></li>
             <li><a href="#" aria-label="footer links">Live Straming</a></li>
           </ul>
@@ -99,7 +129,9 @@
             <li><a href="#" aria-label="footer links">Careers</a></li>
             <li><a href="#" aria-label="footer links">Press Kit></a></li>
             <li><a href="#" aria-label="footer links">Partners</a></li>
-            <li><a href="/pages/blog.html" aria-label="footer links">Blogs</a></li>
+            <li>
+              <a href="/pages/blog.html" aria-label="footer links">Blogs</a>
+            </li>
           </ul>
         </div>
 
@@ -126,7 +158,9 @@
           </div>
           <div class="info_content">
             <h3>Email</h3>
-           <a href="mailto:contact@esportnexus.gg" aria-label="footer links">contact@esportnexus.gg</a> 
+            <a href="mailto:contact@esportnexus.gg" aria-label="footer links"
+              >contact@esportnexus.gg</a
+            >
           </div>
         </div>
         <div class="info phone_number">
@@ -135,7 +169,9 @@
           </div>
           <div>
             <h3>Phone</h3>
-            <a href="tel:+1 (555) 123-4567" aria-label="footer links">+1 (555) 123-4567</a>
+            <a href="tel:+1 (555) 123-4567" aria-label="footer links"
+              >+1 (555) 123-4567</a
+            >
           </div>
         </div>
         <div class="info location">
