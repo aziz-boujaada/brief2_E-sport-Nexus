@@ -35,4 +35,38 @@ Nexus Esports is a comprehensive gaming platform that brings together competitiv
       - small paragraph <br>
       - Two CTA buttons with a gradients colors.    
 
-    
+## 📑 Pages Description
+
+
+
+### 2. Tournament Page (`pages/tournament.html`)
+- Competitive tournament schedules
+- Tournament brackets and standings
+
+
+### 3. Teams Page (`pages/teams.html`)
+- Professional team profiles
+- Team rankings and achievements
+
+### 4. Games Page (`pages/games.html`)
+- Featured games catalog
+- Game community information
+
+### 5. Blog Page (`pages/blog.html`)
+- Latest esports news
+
+
+### 6. Events Page (`pages/events.html`)
+- Filter events by status (All, Upcoming, Live)
+- Event cards showing:
+  - Event name and game type
+  - Date and location
+  - Event status (Live/Upcoming)
+  - Join event button
+### 7. Contact Page (`pages/contact.html`)
+- Contact form
+
+## 📞 Contact Information
+- Email: contact@esportnexus.gg
+- Phone: +1 (555) 123-4567
+- Location: Los Angeles, CA
