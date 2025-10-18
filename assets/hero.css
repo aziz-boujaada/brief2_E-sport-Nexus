@@ -6,7 +6,7 @@
   align-items: center;
   height: calc(100vh - 80px);
   position: relative;
-  background-image: url(/assets/images/home_page_img.webp);
+  background-image: url(../assets/images/home_page_img.webp);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
