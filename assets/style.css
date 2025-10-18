@@ -1,4 +1,4 @@
-:root {
+/* /* :root {
   --bg-color: #07030e;
   --pramiry-color: #00cfff;
   --secondry-color: #b300ff;
@@ -83,6 +83,7 @@ section {
 }
 
 /*Header styling*/
+/*
 #header {
   background-color: var(--banner-bg);
   display: flex;
@@ -134,7 +135,7 @@ section {
 }
 
 /*Hero section styling */
-
+/*
 #hero {
   display: flex;
   justify-content: center;
@@ -145,6 +146,7 @@ section {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  background-attachment: fixed;
   position: relative;
 }
 
@@ -216,6 +218,7 @@ section {
 }
 
 /*Tournaments page*/
+/*
 #tournaments,
 #teams,
 #games {
@@ -319,6 +322,7 @@ section {
 }
 
 /*teams page styling*/
+/*
 .teams_info {
   padding: 12px;
 }
@@ -405,6 +409,7 @@ section {
 }
 
 /*Games section styling*/
+/*
 .games_cards {
   display: flex;
   align-items: center;
@@ -480,12 +485,14 @@ section {
 }
 
 /*blog styling */
+/*
 .blogs_cards {
   display: flex;
   align-items: center;
   justify-content: space-around;
   gap: 24px;
   margin: 24px;
+ 
 }
 
 .blog_card {
@@ -495,6 +502,8 @@ section {
   transition: all 0.5s;
   cursor: pointer;
   overflow: hidden;
+  transition: all 0.5s;
+  width: 100%;
 }
 
 .blog_card .card_img img {
@@ -563,6 +572,7 @@ i {
 }
 
 /*contact page */
+/*
 input ,textarea {
   background-color: var(--cards-bg);
   width: 100%;
@@ -618,7 +628,77 @@ background: linear-gradient(to left , var(--pramiry-color) ,var(--secondry-color
 
 }
 
+.events_banner{
+  position: relative;
+}
+.events_banner::after{
+ content: "";
+ background-color: rgba(5, 0, 31, 0.8);
+ width: 100%;
+ height: 100%;
+ position: absolute;
+ top: 0;
+ left: 0;
+}
+.events_banner img{
+  position: relative;
+  height: 50vh;
+  width: 100%;
+  object-fit: cover;
+}
+
+.banner_title{
+  position: absolute;
+  top: 25%;
+  left:50%;
+  transform: translate(-50% , -50%);
+  text-align: center;
+}
+.banner_title h1{
+
+ font-size: 40px;
+}
+.banner_title p{
+ color: var(--white-color);
+ font-size: 24px;
+}
+
+/*events page */
+/*
+.event_container{
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  margin: 6rem;
+}
+.events_status{
+  background-color: var(--cards-bg);
+  padding: 24px;
+  border-radius: 12px;
+}
+.events_status h2{
+  font-size: 16px;
+  font-family: var(--font-sans);
+  background-color: var(--cards-bg);
+  color: var(--gray-color);
+  padding: 8px;
+  margin-top: 16px;
+  text-align: center;
+  width: 250px;
+  border: 2px solid var(--pramiry-color);
+  border-radius: 20px;
+}
+#All_events{
+  color: var(--white-color);
+  background-color: var(--pramiry-color);
+}
+.events_cards{
+  display: flex;
+  gap: 24px;
+}
+
 /*Footer */
+/*
 #footer {
   padding: 6em 6em 1em;
 }
@@ -633,6 +713,7 @@ background: linear-gradient(to left , var(--pramiry-color) ,var(--secondry-color
 }
 
 /*left part*/
+/*
 .footer_description p {
   padding-top: 1em;
 }
@@ -660,6 +741,7 @@ background: linear-gradient(to left , var(--pramiry-color) ,var(--secondry-color
 }
 
 /*platforms part*/
+/*
 .footer_links h2 {
   font-size: 1em;
   color: var(--white-color);
@@ -757,4 +839,4 @@ a {
 .terms_part a:hover {
   color: var(--pramiry-color);
   transform: scale(1.1);
-}
+}  */

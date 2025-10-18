@@ -10,7 +10,8 @@
     <meta name="author" content="aziz boujaada" />
     <meta name="keywords" content="E-sports nexus gamin " />
 
-    <link rel="stylesheet" href="/assets/style.css" />
+    <link rel="stylesheet" href="/assets/global.css" />
+    <link rel="stylesheet" href="/assets/events.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
@@ -27,28 +28,200 @@
         <nav>
           <ul>
             <li><a href="/index.html">Home</a></li>
-            <li><a href="tournament.html">Tournaments</a></li>
+            <li><a href="event.html">events</a></li>
             <li><a href="teams.html">Teams</a></li>
-            <li><a href="games.html" class="active">Games</a></li>
+            <li><a href="games.html">Games</a></li>
             <li><a href="blog.html">Blogs</a></li>
-            <li><a href="events.html">Events</a></li>
+            <li><a href="events.html" class="active">Events</a></li>
             <li><a href="contact.html">Contact</a></li>
           </ul>
         </nav>
       </div>
       <div class="nav_button">
-        <button>Join Tournament</button>
+        <button>Join event</button>
       </div>
     </header>
 
     <!--events  section-->
     <section id="events">
-      <div class="section_title">
+      <div class="events_banner">
+        <img src="/assets/images/event-banner.jpg" alt="events banner image " />
+      </div>
+      <div class="banner_title">
         <h1>E-sports Nexus Events</h1>
         <p>Discover all events Coming</p>
       </div>
 
-    
+      <div class="event_container">
+        <div class="events_status">
+          <h2 id="All_events">All</h2>
+          <h2 class="">Upcoming</h2>
+          <h2 class="">Live</h2>
+        </div>
+        <div class="events_cards">
+          <div class="event__card">
+            <div class="card_img">
+              <img src="/assets/images/tournaments-1.webp" alt="" />
+            </div>
+            <div class="event_info">
+              <h2 class="event_name">Cyber Championship 2025</h2>
+              <p class="event_game">Dota 2</p>
+
+              <div class="date_location">
+                <i class="fa-solid fa-calendar-days"></i>
+                <p class="date">Dec 20, 2025</p>
+              </div>
+
+              <div class="date_location">
+                <i class="fa-solid fa-location-dot"></i>
+                <p class="location">USA , Los Angelos</p>
+              </div>
+              <button class="join_event_btn">Join event</button>
+
+              <div class="statu_event">
+                <i class="fa-solid fa-hourglass-start"></i>
+                <p>Upcoming</p>
+              </div>
+            </div>
+          </div>
+          <div class="event__card">
+            <div class="card_img">
+              <img src="/assets/images/tournaments-2.webp" alt="" />
+            </div>
+            <div class="event_info">
+              <h2 class="event_name">Taken Global Champion</h2>
+              <p class="event_game">Taken 8</p>
+
+              <div class="date_location">
+                <i class="fa-solid fa-calendar-days"></i>
+                <p class="date">Dec 20, 2025</p>
+              </div>
+
+              <div class="date_location">
+                <i class="fa-solid fa-location-dot"></i>
+                <p class="location">Saudi Aribia ,Jeddah</p>
+              </div>
+              <button class="join_event_btn">Join event</button>
+
+              <div class="statu_event">
+                <i class="fa-solid fa-play"></i>
+                <p>LIVE</p>
+              </div>
+            </div>
+          </div>
+          <div class="event__card">
+            <div class="card_img">
+              <img src="/assets/images/tournaments-3.webp" alt="" />
+            </div>
+            <div class="event_info">
+              <h2 class="event_name">Valo legends</h2>
+              <p class="event_game">Valorant</p>
+
+              <div class="date_location">
+                <i class="fa-solid fa-calendar-days"></i>
+                <p class="date">Oct 19, 2025</p>
+              </div>
+
+              <div class="date_location">
+                <i class="fa-solid fa-location-dot"></i>
+                <p class="location">Japan , Tokyo</p>
+              </div>
+              <button class="join_event_btn">Join event</button>
+
+              <div class="statu_event">
+               <i class="fa-solid fa-hourglass-start"></i>
+                <p>pcoming</p>
+              </div>
+            </div>
+          </div>
+          <div class="event__card">
+            <div class="card_img">
+              <img
+                src="/assets/images/tournaments-3.webp"
+                alt="Fortnite event image"
+              />
+            </div>
+            <div class="event_info">
+              <h2 class="event_name">Fortnite Major</h2>
+              <p class="event_game">Fortnite</p>
+
+              <div class="date_location">
+                <i class="fa-solid fa-calendar-days"></i>
+                <p class="date">Nov 12, 2025</p>
+              </div>
+
+              <div class="date_location">
+                <i class="fa-solid fa-location-dot"></i>
+                <p class="location">Germany , Berlin</p>
+              </div>
+              <button class="join_event_btn">Join event</button>
+
+              <div class="statu_event">
+                <i class="fa-solid fa-hourglass-start"></i>
+                <p>Upcoming</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="event__card">
+            <div class="card_img">
+              <img
+                src="/assets/images/tournaments-3.webp"
+                alt="Free Fire event image"
+              />
+            </div>
+            <div class="event_info">
+              <h2 class="event_name">Free Fire Clash</h2>
+              <p class="event_game">Free Fire</p>
+
+              <div class="date_location">
+                <i class="fa-solid fa-calendar-days"></i>
+                <p class="date">Oct 25, 2025</p>
+              </div>
+
+              <div class="date_location">
+                <i class="fa-solid fa-location-dot"></i>
+                <p class="location">India , Mumbai</p>
+              </div>
+              <button class="join_event_btn">Join event</button>
+
+              <div class="statu_event">
+                <i class="fa-solid fa-play"></i>
+                <p>LIVE</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="event__card">
+            <div class="card_img">
+              <img
+                src="/assets/images/tournaments-3.webp"
+                alt="PUBG event image"
+              />
+            </div>
+            <div class="event_info">
+              <h2 class="event_name">PUBG Cup</h2>
+              <p class="event_game">PUBG</p>
+
+              <div class="date_location">
+                <i class="fa-solid fa-calendar-days"></i>
+                <p class="date">Nov 5, 2025</p>
+              </div>
+
+              <div class="date_location">
+                <i class="fa-solid fa-location-dot"></i>
+                <p class="location">Brazil , São Paulo</p>
+              </div>
+              <button class="join_event_btn">Join event</button>
+
+              <div class="statu_event">
+                <i class="fa-solid fa-play"></i>
+                <p>Upcoming</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!--Footer-->
@@ -59,7 +232,7 @@
           <h1>E-sports Nexus</h1>
           <p>
             The Ultimate platform for competitive gaming .<br />
-            Join Tournaments ,Connect with teams and rise the ranks.
+            Join events ,Connect with teams and rise the ranks.
           </p>
           <div class="footer_icons">
             <a href="#" aria-label="footer links"
@@ -82,7 +255,7 @@
           <h2>Platform</h2>
           <ul>
             <li>
-              <a href="/pages/tournament.html" aria-label="footer links"
+              <a href="/pages/event.html" aria-label="footer links"
                 >Tournemants</a
               >
             </li>

@@ -1,0 +1,286 @@
+:root {
+  --bg-color: #07030e;
+  --pramiry-color: #00cfff;
+  --secondry-color: #b300ff;
+  --banner-bg: #14141eb3;
+  --cards-bg: #0b0b22;
+  --border-color: rgba(14, 140, 194, 0.3);
+  --card-shadow-1: rgba(12, 109, 235, 0.1);
+  --card-shadow-2: rgba(176, 12, 235, 0.1);
+  --gray-color: rgb(131, 131, 131);
+  --icon-hover-1: rgba(82, 187, 239, 0.3);
+  --icon-hover-2: rgba(124, 36, 249, 0.3);
+  --icon-hover-3: rgba(14, 204, 229, 0.3);
+  --button-hover1: rgba(168, 0, 252, 0.3);
+  --white-color: #ffff;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+    "Liberation Mono", "Courier New", monospace;
+  --font-sans: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg-color);
+  position: relative;
+}
+
+hr {
+  height: 1px;
+  background-color: #00cfff;
+  border: none;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  border: none;
+  border-radius: 1em;
+  width: 12em;
+  height: 3em;
+  color: #ffff;
+  font-size: 12px;
+  font-weight: bold;
+  background: linear-gradient(to right,
+      var(--pramiry-color),
+      var(--secondry-color));
+  transition: all 0.5s;
+  cursor: pointer;
+}
+
+h1 {
+  background: linear-gradient(to right,
+      var(--pramiry-color),
+      var(--secondry-color));
+  color: transparent;
+  background-clip: text;
+  font-family: var(--font-sans);
+}
+
+p {
+  color: var(--gray-color);
+  font-size: 1em;
+  padding-top: 12px;
+  font-family: var(--font-sans);
+}
+
+section {
+  padding-top: 100px;
+}
+
+/*Header styling*/
+#header {
+  background-color: var(--banner-bg);
+  display: flex;
+  align-items: center;
+  z-index: 100;
+  justify-content: space-around;
+  position: fixed;
+  width: 100%;
+  height: 80px;
+  border-bottom: 1px solid var(--pramiry-color);
+}
+
+.logo span {
+  background: linear-gradient(to right,
+      var(--pramiry-color),
+      var(--secondry-color));
+  color: transparent;
+  background-clip: text;
+  font-family: var(--font-sans);
+  font-size: 16px;
+  transition: all 0.5s;
+}
+
+.logo h1:hover {
+  transform: scale(1.1);
+}
+
+.nav_list nav ul {
+  display: flex;
+  align-items: center;
+  gap: 2em;
+}
+
+.nav_list nav ul li a {
+  color: var(--gray-color);
+  font-family: var(--font-sans);
+  transition: all 0.5s;
+  cursor: pointer;
+}
+
+.nav_list nav ul li a:hover,
+.nav_list nav ul li a.active {
+  color: var(--pramiry-color);
+  transform: scale(1.1);
+}
+
+.nav_button :hover {
+  transform: scale(1.1);
+}
+
+.section_title {
+  text-align: center;
+}
+
+#tournaments,
+#teams,
+#games {
+  margin: 0 4em;
+}
+
+/*Footer */
+#footer {
+  padding: 6em 6em 1em;
+}
+
+.Top_footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: start;
+  border-top: 2px solid var(--pramiry-color);
+  padding: 2em 0;
+}
+
+/*left part*/
+.footer_description p {
+  padding-top: 1em;
+}
+
+.footer_icons {
+  display: flex;
+  align-items: center;
+  gap: 2em;
+  padding-top: 1em;
+}
+
+.footer_icons i {
+  font-size: 16px;
+  color: var(--pramiry-color);
+  border: 1px solid var(--pramiry-color);
+  border-radius: 8px;
+  padding: 0.5em;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+
+.footer_icons i:hover {
+  background-color: var(--icon-hover-1);
+  transform: scale(1.1);
+}
+
+/*platforms part*/
+.footer_links h2 {
+  font-size: 1em;
+  color: var(--white-color);
+  font-family: var(--font-sans);
+  text-align: center;
+}
+
+.footer_links ul li {
+  font-size: 1em;
+  color: var(--gray-color);
+  font-family: var(--font-sans);
+  padding-top: 12px;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+
+.footer_links a {
+  display: inline-block;
+  transition: all 0.5s;
+}
+
+.footer_links a:hover {
+  color: var(--pramiry-color);
+  transform: translateX(10px);
+}
+
+.contact_info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.info {
+  display: flex;
+  align-items: center;
+  gap: 2em;
+  padding: 1em;
+}
+
+.email_icon i {
+  background-color: var(--icon-hover-1);
+  color: var(--pramiry-color);
+  border: 1px solid var(--icon-hover-1);
+  font-size: 1.5em;
+  padding: 8px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.phone_icon i {
+  background-color: var(--icon-hover-2);
+  color: var(--secondry-color);
+  border: 1px solid var(--icon-hover-2);
+  font-size: 1.5em;
+  padding: 8px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.location_icon i {
+  background-color: var(--icon-hover-3);
+  color: rgba(0, 194, 194, 0.752);
+  border: 1px solid var(--icon-hover-3);
+  font-size: 1.5em;
+  padding: 8px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.info h3,
+a {
+  color: var(--gray-color);
+  font-size: 16px;
+  font-family: var(--font-sans);
+}
+
+.info p {
+  font-size: 16px;
+}
+
+.copyright_part {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.terms_part a {
+  color: var(--gray-color);
+  font-size: 16px;
+  font-family: var(--font-sans);
+  padding-left: 1.5em;
+  transition: all 0.5s;
+}
+
+.terms_part a:hover {
+  color: var(--pramiry-color);
+  transform: scale(1.1);
+}
+

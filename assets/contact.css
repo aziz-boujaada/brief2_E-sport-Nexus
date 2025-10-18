@@ -1,0 +1,57 @@
+/*contact page */
+input ,textarea {
+  background-color: var(--cards-bg);
+  width: 100%;
+  height: 40px;
+  border: none;
+  border: 1px solid var(--pramiry-color);
+  border-radius: 12px;
+  padding-left: 12px;
+  color: var(--pramiry-color);
+  margin-top: 12px;
+}
+input:focus{
+  border:2px solid var(--pramiry-color);
+}
+label {
+  color: var(--gray-color);
+  font-size: 16px;
+  font-family: var(--font-sans);
+   
+}
+
+textarea {
+  width: 100%;
+  height: 150px;
+  resize: vertical;
+  padding: 4px;
+}
+.name , .email, .subject , .message{
+  padding-top: 20px;
+}
+#form {
+  background-color: var(--cards-bg);
+  margin: 4rem 24rem;
+  border-radius: 12px;
+  padding: 4rem;
+}
+
+.form_title {
+  background: linear-gradient(to right, var(--pramiry-color), var(--secondry-color) 80%);
+  color: transparent;
+  background-clip: text;
+  font-size: 34px;
+  font-family: var(--font-sans);
+  text-align: center;
+}
+.send_msg_btn{
+  width: 100%;
+  margin-top:16px ;
+  transition: all 0.4s;
+}
+.send_msg_btn:hover{
+background: linear-gradient(to left , var(--pramiry-color) ,var(--secondry-color));
+
+}
+
+

@@ -1,0 +1,95 @@
+/*Tournaments page*/
+
+
+
+
+.tournaments_cards,
+.teams_cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  align-items: center;
+  justify-content: space-between;
+  gap: 4em;
+  padding-top: 2em;
+}
+
+.card {
+  position: relative;
+  background-color: var(--cards-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+
+.card_img img {
+  width: 300px;
+  height: 200px;
+  border-radius: 6px;
+  object-fit: cover;
+  transition: 0.5s all;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card:hover .card_img img {
+  transform: scale(1.08);
+}
+
+.tournament_info {
+  padding: 1em;
+}
+
+.card .tournament_name {
+  font-size: 16px;
+  font-family: var(--font-sans);
+  color: var(--gray-color);
+}
+
+.card .tournament_game {
+  color: var(--pramiry-color);
+}
+
+.date_team_number {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.date_team_number i {
+  color: var(--gray-color);
+  padding-top: 12px;
+}
+
+.join_tournament_btn {
+  margin-top: 1em;
+  width: 100%;
+}
+
+.prizz_pool {
+  background: linear-gradient(to right,
+      var(--secondry-color),
+      var(--pramiry-color));
+  width: 50%;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border-radius: 24px;
+  position: absolute;
+  top: 6px;
+  right: 6px;
+}
+
+.prizz_pool p {
+  padding-bottom: 12px;
+  color: var(--white-color);
+}
+
+.prizz_pool i {
+  color: var(--white-color);
+}

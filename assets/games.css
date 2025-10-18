@@ -1,0 +1,74 @@
+/*Games section styling*/
+.games_cards {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 32px;
+}
+
+.card_game {
+  width: 100%;
+  margin-top: 32px;
+  border: 2px solid var(--border-color);
+  border-radius: 12px;
+  position: relative;
+  transition: all 0.5s;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.card_game::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: rgba(27, 25, 25, 0.7);
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 12px;
+}
+
+.card_game:hover {
+  transform: scale(1.03);
+  box-shadow: 5px 5px 24px var(--pramiry-color);
+}
+
+.card_game:hover,
+.game_image img {
+  transform: scale(1.05);
+}
+
+.game_image img {
+  width: 100%;
+  height: 350px;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.game_info {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  z-index: 1;
+}
+
+.game_type {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 18px;
+  font-family: var(--font-sans);
+  color: var(--pramiry-color);
+}
+
+.game_name {
+  color: var(--white-color);
+  font-family: var(--font-sans);
+  padding-top: 12px;
+}
+
+.players_number {
+  color: rgb(149, 149, 149);
+  font-family: var(--font-sans);
+  padding-top: 12px;
+}

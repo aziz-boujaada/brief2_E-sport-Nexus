@@ -1,0 +1,82 @@
+/*Hero section styling */
+
+#hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 80px);
+  position: relative;
+  background-image: url(/assets/images/home_page_img.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  position: relative;
+}
+
+#hero::after {
+  content: "";
+  background-color: rgba(0, 0, 0, 0.655);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.hero_content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 10em;
+
+  z-index: 1;
+}
+
+#hero h1 {
+  text-align: center;
+  font-size: 4em;
+  width: 60%;
+}
+
+.section_buttons {
+  display: flex;
+  align-items: center;
+  gap: 2em;
+  padding-top: 2em;
+}
+
+.section_buttons button {
+  height: 4em;
+  width: 14em;
+  font-size: 14px;
+  transition: all 0.5s;
+}
+
+.section_buttons button i {
+  padding: 10px;
+  color: white;
+}
+
+.section_buttons button:hover {
+  transform: scale(1.1);
+}
+
+.section_buttons .watch_live_btn {
+  background: var(--bg-color);
+  color: var(--pramiry-color);
+  border: 1px solid var(--pramiry-color);
+}
+
+.section_buttons .watch_live_btn i {
+  color: var(--pramiry-color);
+}
+
+.section_buttons .watch_live_btn:hover {
+  background: var(--pramiry-color);
+  color: var(--white-color);
+}
+
+.section_buttons .watch_live_btn:hover i {
+  color: var(--white-color);
+}
